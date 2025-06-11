@@ -9,6 +9,10 @@ export async function onRegistration(registrationData) {
     return await axios.post(`${serverURL}/auth/register`, registrationData);
 };
 
+export async function onLogin(loginData) {
+    return await axios.post(`${serverURL}/auth/login`, loginData);
+};
+
 export async function onLogout() {
     return await axios.get(`${serverURL}/auth/logout`);
 };
